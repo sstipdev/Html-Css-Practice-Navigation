@@ -1,0 +1,158 @@
+@keyframes borderAnimation {
+  from {
+  }
+  to {
+  }
+}
+
+:root {
+  --main-a-color: #ffe05c;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+#big-screen {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(58, 58, 56, 0.6);
+  width: 100%;
+  height: 100%;
+  top: 0;
+  z-index: 5;
+}
+
+#small-screen {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(58, 58, 56, 0.6);
+  width: 100%;
+  height: 100%;
+  top: 0;
+  z-index: 5;
+}
+
+#big-screen span {
+  margin: 20px 0px;
+  color: #ffba46;
+  font-weight: 600;
+  font-size: 22px;
+}
+
+#small-screen span {
+  margin: 20px 0px;
+  color: #ffba46;
+  font-weight: 600;
+  font-size: 18px;
+}
+
+@media (max-width: 850px) {
+  #big-screen {
+    display: none;
+  }
+}
+
+@media (min-width: 775px) {
+  #small-screen {
+    display: none;
+  }
+}
+.user-component__btn:hover {
+  border: 1px solid var(--main-a-color);
+  transition: all 1s;
+}
+
+.status-bar-background {
+  background-color: rgba(0, 0, 0, 0.6);
+  border-radius: 10px;
+  padding: 15px;
+  width: 50%;
+}
+
+.fa-arrow-left {
+  color: rgb(235, 189, 63);
+}
+
+.status-bar-main {
+  display: flex;
+  color: white;
+  font-size: 25px;
+  padding-bottom: 25px;
+}
+
+.status-bar-main__column {
+  width: 33%;
+}
+
+.status-bar-main__column:nth-child(2) {
+  display: flex;
+  justify-content: center;
+}
+
+.user-component__column {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 18px;
+  background-color: rgba(0, 0, 0, 0.72);
+  color: white;
+  border-radius: 5px;
+  font-size: 18px;
+  margin-bottom: 10px;
+  position: relative;
+}
+
+.user-component__column:hover {
+  border: 1px solid rgba(248, 246, 246, 0.6);
+}
+
+.user-component__btn {
+  background-color: rgba(69, 70, 73, 1);
+  position: absolute;
+  right: 10px;
+  border-radius: 5px;
+  padding: 3px;
+  top: 7px;
+}
+
+.user-component__place {
+  font-weight: 600;
+}
+
+.user-component__km {
+  font-weight: 300;
+  color: aquamarine;
+}
+
+.user-component__main {
+  height: 50vh;
+  overflow: auto;
+  padding-right: 7px;
+}
+
+.user-component__main::-webkit-scrollbar {
+  width: 3px; /* 스크롤바의 너비 */
+}
+
+.user-component__main::-webkit-scrollbar-thumb {
+  height: 30%; /* 스크롤바의 길이 */
+  background: #b1bed1; /* 스크롤바의 색상 */
+  border-radius: 10px;
+}
+
+.user-component__main::-webkit-scrollbar-track {
+  background: rgba(147, 181, 229, 0.1); /*스크롤바 뒷 배경 색상*/
+}
